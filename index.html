@@ -16,9 +16,17 @@
         <h1>InscriptGPT</h1>
     </div>
 
-    <div class="qr">
+    <!-- <div class="qr">
         <button type="button">Scan QR Code</button>
+    </div> -->
+
+    <div class="qrcode">
+        <a href="">
+            <img src="./qr.jpeg" alt="">
+            <h3>Click to Scan QR</h3>
+    </a>
     </div>
+
 
     <div class="queryBox">
         <div class="returnVal">
@@ -48,13 +56,14 @@
     *{
         margin-left: 10px;
         margin-right: 10px;
-        background-color: #ff7a7a;
+        background-color: #ffffff;
     }
 
     .logo img{
         position: absolute;
         width: fit-content;
-        height: 140px;
+        height: 150px;
+        width: 150px;
         margin-top: 10px;
     }
     .heading h1{
@@ -67,6 +76,39 @@
         padding: 10px;
     }
 
+    .qrcode{
+        position: absolute;
+        left: 1200px;
+        top: 30px;
+        /* border: 1px solid black; */
+        width: fit-content;
+    }
+
+    .qrcode img{
+        width: 120px;
+        height: 120px;
+        margin: 0;
+        padding: 0;
+        margin-top: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .qrcode h3{
+        position: relative;
+        left: -2px;
+        top: -13px;
+        width: fit-content;
+        margin-bottom: 0;
+        /* top: 115px; */
+    }
+
+    .qrcode a{
+        text-decoration: none;
+        color: black;
+        margin: 0;
+        padding: 0;
+    }
     .filters ul{
         position: relative;
         top: 40px;
@@ -82,18 +124,20 @@
         color: black;
         /* border: 1px solid black; */
         padding: 15px;
-        font-size: 18px;
-        background-color: #35affb;
+        font-size: 22px;
+        font-weight: bold;
+        /* background-color: #35affb; */
         transition-duration: 0.4s;
-        border-radius: 25px;
+        /* border-radius: 25px; */
     }
 
     .filters li a:hover{
         /* padding: 10px; */
-        background-color:#ceecff;
+        background-color:#35affb;
         /* font-weight: bolder; */
         transition-duration: 0.4s;
-        border: 1px solid black;
+        /* border: 1px solid black; */
+        border-radius: 3px;
     }
 
 
@@ -106,17 +150,18 @@
     .qr button{
         padding: 20px;
         font-size: 20px;
-        background-color: #35affb;
+        border: 3px solid black;
+        /* background-color: #35affb; */
         transition-duration: 0.4s;
         border-radius: 3px;
-        box-shadow: 3px 3px 3px gray;
+        font-weight: bold;
+        /* box-shadow: 3px 3px 3px gray; */
     }
 
     .qr button:hover{
         transition-duration: 0.4s;
         background-color: #35affb;
-        padding: 20px;
-        font-size: 25px;
+        /* font-size: 25px; */
         font-weight: bolder;
     }
 
