@@ -9,36 +9,40 @@
 <body>
 
     <div class="logo">
-        <img src="./iiitdmlogo.png" alt="">
+        <img src="./iGPT.png" alt="">
     </div>
 
     <div class="heading">
-        <h1>InscriptGPT</h1>
+        <h1>Inscript<span>GPT</span></h1>
     </div>
 
-    <div class="qr">
-        <button type="button">Scan QR Code</button>
+    <div class="qrcode">
+        <a href="#" class="qr">
+            <img src="./Connect Camera.png" alt="">
+            <p>Click To Scan</p>
+        </a>
+    </div>
+
+    <div class="filters">
+        <ul>
+            <li><a href="#">Medical</a></li>
+            <li><a href="#">Technology</a></li>
+            <li><a href="#">Sports</a></li>
+            <li><a href="#">Economy</a></li>
+            <li><a href="#">Society</a></li>
+            <li><a href="#">Art and Culture</a></li>
+        </ul>
     </div>
 
     <div class="queryBox">
-        <div class="returnVal">
-            <p class="answer">Ask me anything!</p>
-        </div>
 
         <div class="typeBox">
-            <input type="text" class="queryAsk" placeholder="Ask InscriptGPT. . .">
+            <input type="text" class="queryAsk" placeholder="Ask InscriptGPT">
             <button type="submit" class="ask">Ask</button>
         </div>
 
-        <div class="filters">
-            <ul>
-                <li><a href="#">Medical</a></li>
-                <li><a href="#">Technology</a></li>
-                <li><a href="#">Sports</a></li>
-                <li><a href="#">Economy</a></li>
-                <li><a href="#">Society</a></li>
-                <li><a href="#">Art and Culture</a></li>
-            </ul>
+        <div class="returnVal">
+            <p class="answer">Ask me anything!</p>
         </div>
 
     </div>
@@ -51,10 +55,31 @@
         background-color: #ffffff;
     }
 
+    .qrcode{
+        position: relative;
+        left: 30px;
+        bottom: 25px;
+    }
+    .qr img{
+        width: 100px;
+    }
+    .qr p{
+        margin: 0;
+        text-align: center;
+        position: relative;
+        top: -3px;
+    }
+
+    .qrcode a{
+        text-decoration: none;
+        color: black;
+    }
+
     .logo img{
         position: absolute;
         width: fit-content;
-        height: 140px;
+        height: 80px;
+        top: 30px;
         margin-top: 10px;
     }
     .heading h1{
@@ -66,11 +91,14 @@
         width: fit-content;
         padding: 10px;
     }
-
+    .heading span{
+        margin-left: 0;
+        color: #119bf1;
+    }
     .filters ul{
-        position: relative;
-        top: 40px;
-        left: px;
+        position: absolute;
+        top: 180px;
+        left: 180px;
     }
 
     .filters li{
@@ -82,18 +110,21 @@
         color: black;
         /* border: 1px solid black; */
         padding: 15px;
-        font-size: 18px;
-        background-color: #35affb;
+        font-size: 20px;
+        font-weight: bold;
+        /* background-color: #35affb; */
         transition-duration: 0.4s;
-        border-radius: 25px;
+        /* border-radius: 25px; */
     }
 
     .filters li a:hover{
         /* padding: 10px; */
-        background-color:#ceecff;
+        background-color:#35affb;
+        color: white;
         /* font-weight: bolder; */
         transition-duration: 0.4s;
-        border: 1px solid black;
+        border: 0.5px solid black;
+        border-radius: 3px;
     }
 
 
@@ -124,8 +155,9 @@
         position: absolute;
         left: 180px;
         width: 1000px;
-        top: 200px;
-        margin-bottom: 20px;
+        top: 250px;
+        margin-bottom: 0px;
+        margin-top: 10px;
     }
 
     .queryBox .returnVal{
@@ -143,27 +175,30 @@
 
     .queryBox .typeBox input{
         border: 1px solid black;
-        width: 820px;
+        width: 840px;
         position: relative;
-        right: 10px;
+        /* right: 10px; */
+        margin-left: 0;
         padding: 10px;
-        font-size: 20px;
+        font-size: 18px;
+        font-weight: bold;
         box-shadow: 2px 2px 2px gray;
         background-color: #ceecff;
         color: black;
     }
 
     .queryBox .typeBox{
-        padding-top: 30px;
+        padding-bottom: 20px;
+        /* border: 1px solid black; */
     }
 
     .queryBox .typeBox button{
         position: relative;
-        right: 10px;
+        /* right: 10px; */
         padding: 10px;
         margin: 0;
-        width: 110px;
-        margin-left: 2px;
+        width: 100px;
+        /* margin-left: 2px; */
         font-size: 20px;
         transition-duration: 0.4s;
         box-shadow: 2px 2px 2px gray;
