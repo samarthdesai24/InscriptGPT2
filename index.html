@@ -8,19 +8,29 @@
 </head>
 <body>
 
-    <div class="logo">
-        <img src="./iGPT.png" alt="">
+    <div class="header">
+
+        <div class="logo">
+            <img src="./iGPT.png" alt="">
+        </div>
+    
+        <div class="heading">
+            <h1>Inscript<span>GPT</span></h1>
+        </div>
+    
+        <div class="qrcode">
+            <a href="#" class="qr">
+                <img src="./Connect Camera.png" alt="">
+                <p>Click To Scan</p>
+            </a>
+        </div>
+
     </div>
 
-    <div class="heading">
-        <h1>Inscript<span>GPT</span></h1>
-    </div>
+    <div class="overlay hidden"></div>
 
-    <div class="qrcode">
-        <a href="#" class="qr">
-            <img src="./Connect Camera.png" alt="">
-            <p>Click To Scan</p>
-        </a>
+    <div class="qrzoom hidden">
+        <img src="./Connect Camera.png" alt="">
     </div>
 
     <div class="filters">
@@ -50,11 +60,19 @@
 
 <style>
     *{
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 0px;
+        margin-right: 0px;
         background-color: #ffffff;
     }
 
+    .hidden{
+        display: none;
+    }
+
+    .header{
+        position: fixed;
+        left: 60px;
+    }
     .qrcode{
         position: relative;
         left: 30px;
@@ -70,6 +88,27 @@
         top: -3px;
     }
 
+    .overlay{
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
+        backdrop-filter: blur(5px);
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 20;
+    }
+    .qrzoom{
+        position: fixed;
+        top: 200px;
+        left: 470px;
+        z-index: 21;
+    }
+
+    .qrzoom img{
+        width: 500px;
+        margin: 0;
+        padding: 0;
+    }
     .qrcode a{
         text-decoration: none;
         color: black;
@@ -98,11 +137,12 @@
     .filters ul{
         position: absolute;
         top: 180px;
-        left: 180px;
+        left: 210px;
     }
 
     .filters li{
         display: inline;
+        padding-left: 40px;
     }
 
     .filters li a{
@@ -175,7 +215,7 @@
 
     .queryBox .typeBox input{
         border: 1px solid black;
-        width: 840px;
+        width: 873px;
         position: relative;
         /* right: 10px; */
         margin-left: 0;
@@ -199,7 +239,7 @@
         margin: 0;
         width: 100px;
         /* margin-left: 2px; */
-        font-size: 20px;
+        font-size: 18px;
         transition-duration: 0.4s;
         box-shadow: 2px 2px 2px gray;
         border-radius: 2px;
@@ -303,6 +343,33 @@
         document.querySelector('.answer').textContent = "Ask me anything!";
     })
 
+    let qr_on = 0;
+    document.querySelector('.qrcode').addEventListener('click', function(){
+        // if(document.querySelector('.qrzoom').classList.contains('hidden')){
+        //     document.querySelector('.qrzoom').classList.remove('hidden');
+        //     qr_on = 1;
+        //     document.querySelector('body').classList.add('body_blur');
+
+        // }
+
+        document.querySelector('.overlay').classList.remove('hidden');
+        document.querySelector('.qrzoom').classList.remove('hidden');
+    });
+
+    // document.addEventListener('keydown', function(e){
+    //     if(qr_on == 1){
+    //         document.querySelector('.qrzoom').classList.add('hidden');
+    //         document.querySelector('body').classList.remove('body_blur');
+    //     }
+    // })
+    
+    document.addEventListener('keydown', function(e){
+        if(!document.querySelector('.qrzoom').classList.contains('hidden')){
+            document.querySelector('.qrzoom').classList.add('hidden');
+            document.querySelector('.overlay').classList.add('hidden');
+        }
+    })
+    
 
 </script>
 </html>
