@@ -8,6 +8,7 @@
 </head>
 <body>
 
+<!-- <<<<<<< HEAD -->
     <div class="header">
 
         <div class="logo">
@@ -33,6 +34,7 @@
         <img src="./Connect Camera.png" alt="">
     </div>
 
+<!-- <<<<<<< HEAD -->
     <div class="filters">
         <ul>
             <li><a href="#">Medical</a></li>
@@ -42,17 +44,51 @@
             <li><a href="#">Society</a></li>
             <li><a href="#">Art and Culture</a></li>
         </ul>
+<!-- ======= -->
+    <!-- <div class="qr">
+        <button type="button">Scan QR Code</button>
+    </div> -->
+
+    <div class="qrcode">
+        <a href="">
+            <img src="./qr.jpeg" alt="">
+            <h3>Click to Scan QR</h3>
+    </a>
+<!-- >>>>>>> 49baa1b9d5a28861e0d0bde1dc8945670aad4ebe
+======= -->
+    <div class="logo">
+        <img src="./iiitdmlogo.png" alt="">
     </div>
 
+    <div class="heading">
+        <h1>InscriptGPT</h1>
+    </div>
+
+    <div class="qr">
+        <button type="button">Scan QR Code</button>
+<!-- >>>>>>> parent of cce1907 (Nav bar place changed. Logo changed) -->
+    </div>
+
+
     <div class="queryBox">
+        <div class="returnVal">
+            <p class="answer">Ask me anything!</p>
+        </div>
 
         <div class="typeBox">
-            <input type="text" class="queryAsk" placeholder="Ask InscriptGPT">
+            <input type="text" class="queryAsk" placeholder="Ask InscriptGPT. . .">
             <button type="submit" class="ask">Ask</button>
         </div>
 
-        <div class="returnVal">
-            <p class="answer">Ask me anything!</p>
+        <div class="filters">
+            <ul>
+                <li><a href="#">Medical</a></li>
+                <li><a href="#">Technology</a></li>
+                <li><a href="#">Sports</a></li>
+                <li><a href="#">Economy</a></li>
+                <li><a href="#">Society</a></li>
+                <li><a href="#">Art and Culture</a></li>
+            </ul>
         </div>
 
     </div>
@@ -65,6 +101,7 @@
         background-color: #ffffff;
     }
 
+/* <<<<<<< HEAD */
     .hidden{
         display: none;
     }
@@ -117,9 +154,14 @@
     .logo img{
         position: absolute;
         width: fit-content;
+/* <<<<<<< HEAD */
         height: 80px;
         top: 30px;
-        margin-top: 10px;
+/* ======= */
+        height: 150px;
+        width: 150px;
+/* >>>>>>> 49baa1b9d5a28861e0d0bde1dc8945670aad4ebe */
+/* ======= */
     }
     .heading h1{
         font-size: 50px;
@@ -130,14 +172,55 @@
         width: fit-content;
         padding: 10px;
     }
+/* <<<<<<< HEAD */
+/* <<<<<<< HEAD */
     .heading span{
         margin-left: 0;
         color: #119bf1;
+    }
+/* ======= */
+
+    .qrcode{
+        position: absolute;
+        left: 1200px;
+        top: 30px;
+        /* border: 1px solid black; */
+        width: fit-content;
+    }
+
+    .qrcode img{
+        width: 120px;
+        height: 120px;
+        margin: 0;
+        padding: 0;
+        margin-top: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .qrcode h3{
+        position: relative;
+        left: -2px;
+        top: -13px;
+        width: fit-content;
+        margin-bottom: 0;
+        /* top: 115px; */
+    }
+
+    .qrcode a{
+        text-decoration: none;
+        color: black;
+        margin: 0;
+        padding: 0;
+/* >>>>>>> 49baa1b9d5a28861e0d0bde1dc8945670aad4ebe */
     }
     .filters ul{
         position: absolute;
         top: 180px;
         left: 210px;
+/* ======= */
+
+/* >>>>>>> parent of cce1907 (Nav bar place changed. Logo changed) */
     }
 
     .filters li{
@@ -150,21 +233,43 @@
         color: black;
         /* border: 1px solid black; */
         padding: 15px;
+/* <<<<<<< HEAD
+<<<<<<< HEAD */
         font-size: 20px;
+/* ======= */
+        font-size: 22px;
+/* >>>>>>> 49baa1b9d5a28861e0d0bde1dc8945670aad4ebe */
         font-weight: bold;
         /* background-color: #35affb; */
+/* ======= */
+        font-size: 18px;
+        background-color: #35affb;
+/* >>>>>>> parent of cce1907 (Nav bar place changed. Logo changed) */
         transition-duration: 0.4s;
-        /* border-radius: 25px; */
+        border-radius: 25px;
     }
 
     .filters li a:hover{
         /* padding: 10px; */
+/* <<<<<<< HEAD */
         background-color:#35affb;
+/* <<<<<<< HEAD */
         color: white;
         /* font-weight: bolder; */
         transition-duration: 0.4s;
         border: 0.5px solid black;
+/* ======= */
+        /* font-weight: bolder; */
+        transition-duration: 0.4s;
+        /* border: 1px solid black; */
+/* >>>>>>> 49baa1b9d5a28861e0d0bde1dc8945670aad4ebe */
         border-radius: 3px;
+/* ======= */
+        background-color:#ceecff;
+        /* font-weight: bolder; */
+        transition-duration: 0.4s;
+        border: 1px solid black;
+/* >>>>>>> parent of cce1907 (Nav bar place changed. Logo changed) */
     }
 
 
@@ -177,17 +282,18 @@
     .qr button{
         padding: 20px;
         font-size: 20px;
-        background-color: #35affb;
+        border: 3px solid black;
+        /* background-color: #35affb; */
         transition-duration: 0.4s;
         border-radius: 3px;
-        box-shadow: 3px 3px 3px gray;
+        font-weight: bold;
+        /* box-shadow: 3px 3px 3px gray; */
     }
 
     .qr button:hover{
         transition-duration: 0.4s;
         background-color: #35affb;
-        padding: 20px;
-        font-size: 25px;
+        /* font-size: 25px; */
         font-weight: bolder;
     }
 
@@ -195,9 +301,8 @@
         position: absolute;
         left: 180px;
         width: 1000px;
-        top: 250px;
-        margin-bottom: 0px;
-        margin-top: 10px;
+        top: 200px;
+        margin-bottom: 20px;
     }
 
     .queryBox .returnVal{
@@ -215,31 +320,35 @@
 
     .queryBox .typeBox input{
         border: 1px solid black;
+/* <<<<<<< HEAD */
         width: 873px;
+/* ======= */
+        width: 820px;
+/* >>>>>>> parent of cce1907 (Nav bar place changed. Logo changed) */
         position: relative;
-        /* right: 10px; */
-        margin-left: 0;
+        right: 10px;
         padding: 10px;
-        font-size: 18px;
-        font-weight: bold;
+        font-size: 20px;
         box-shadow: 2px 2px 2px gray;
         background-color: #ceecff;
         color: black;
     }
 
     .queryBox .typeBox{
-        padding-bottom: 20px;
-        /* border: 1px solid black; */
+        padding-top: 30px;
     }
 
     .queryBox .typeBox button{
         position: relative;
-        /* right: 10px; */
+        right: 10px;
         padding: 10px;
         margin: 0;
         width: 100px;
         /* margin-left: 2px; */
         font-size: 18px;
+        width: 110px;
+        margin-left: 2px;
+        font-size: 20px;
         transition-duration: 0.4s;
         box-shadow: 2px 2px 2px gray;
         border-radius: 2px;
@@ -325,7 +434,7 @@
                 returned = checkQuery(query);
                 document.querySelector('.answer').textContent = returned;
             }
-    })
+    });
 
     document.addEventListener("keydown", function(e){
         if(e.key == 'Enter'){
@@ -341,7 +450,7 @@
 
         else if(e.key == '`')
         document.querySelector('.answer').textContent = "Ask me anything!";
-    })
+    });
 
     let qr_on = 0;
     document.querySelector('.qrcode').addEventListener('click', function(){
@@ -368,7 +477,7 @@
             document.querySelector('.qrzoom').classList.add('hidden');
             document.querySelector('.overlay').classList.add('hidden');
         }
-    })
+    });
     
 
 </script>
