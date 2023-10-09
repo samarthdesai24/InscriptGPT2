@@ -18,14 +18,14 @@
         </div>
         <div class="qrcode">
             <a href="#">
-                <img src="./qr.jpeg" alt="">
+                <img src="./qr.png" alt="">
                 <h3>Click To Scan</h3>
             </a>
         </div>
     </div>
 
        <div class="qrzoom hidden">
-            <img src="./qr.jpeg" alt="">
+            <img src="./qr.png" alt="">
             <p>Press "Q" to Cancel</p>
         </div>
 
@@ -41,7 +41,7 @@
 
     <div class="main">
         <input type="text" class="query" placeholder="Ask InscriptGPT Here">
-        <button type="submit">Ask</button>
+        <button type="submit" class="ask">Ask</button>
         <div class="answer">
             <p>Here is your answer....</p>
         </div>
@@ -134,6 +134,7 @@
         color: white;
         font-size: 17px;
         font-weight: bold;
+        
     }
 
     .filters{
@@ -195,7 +196,7 @@
         background-color: rgba(21, 145, 246, 0.3)
     }
     .main .answer p{
-        font-size: 17px;
+        font-size: 18px;
     }
 
     .hidden{
@@ -217,7 +218,40 @@
             document.querySelector('.qrzoom').classList.add('hidden');
             document.querySelector('.qrzoom').classList.remove('overlay');
         }
-    })
+    });
 
+    function answerQuery(query){
+        let retval;
+
+        for(const word of query.split(' ')){
+
+            if(word == 'srinidhi' || word == 'Srinidhi' || word == 'SRINIDHI'){
+            retval = 'Srinidhi is ill today, it is advised to rest.';
+            break;
+            }
+
+            else{
+                retval = "None Here";
+            }
+        }
+        return retval;
+    }
+
+    document.querySelector('.ask').addEventListener('click', function(){
+        let query = document.querySelector('.query').value;
+        let answer = answerQuery(query);
+        document.querySelector('.answer').textContent = answer;
+    });
+
+    document.addEventListener('keydown', function(e){
+        let query = document.querySelector('.query').value;
+        if(query != "" && e.key == 'Enter'){
+            let answer = answerQuery(query);
+            document.querySelector('.answer').textContent = answer;
+        }
+        if(query == "" && e.key == 'Enter'){
+            alert("Input query is empty");
+        }
+    });
 </script>
 </html>
