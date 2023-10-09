@@ -3,482 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
     <title>inscriptGPT</title>
 </head>
 <body>
-
-<!-- <<<<<<< HEAD -->
+    
     <div class="header">
 
         <div class="logo">
-            <img src="./iGPT.png" alt="">
+            <img src="./iiitdmlogo.png" alt="">
         </div>
-    
+
         <div class="heading">
             <h1>Inscript<span>GPT</span></h1>
         </div>
-    
         <div class="qrcode">
-            <a href="#" class="qr">
-                <img src="./Connect Camera.png" alt="">
-                <p>Click To Scan</p>
+            <a href="" class="qr">
+                <img src="./qr.jpeg" alt="">
+                <h3>Click To Scan</h3>
             </a>
         </div>
-
+        <div class="qrzoom overlay">
+            <img src="./qr.jpeg" alt="">
+        </div>
     </div>
 
-    <div class="overlay hidden"></div>
-
-    <div class="qrzoom hidden">
-        <img src="./Connect Camera.png" alt="">
-    </div>
-
-<!-- <<<<<<< HEAD -->
     <div class="filters">
         <ul>
-            <li><a href="#">Medical</a></li>
-            <li><a href="#">Technology</a></li>
-            <li><a href="#">Sports</a></li>
-            <li><a href="#">Economy</a></li>
-            <li><a href="#">Society</a></li>
             <li><a href="#">Art and Culture</a></li>
+            <li><a href="#">Economy</a></li>
+            <li><a href="#">Mathematics</a></li>
+            <li><a href="#">Social</a></li>
+            <li><a href="#">Sports</a></li>
         </ul>
-<!-- ======= -->
-    <!-- <div class="qr">
-        <button type="button">Scan QR Code</button>
-    </div> -->
-
-    <div class="qrcode">
-        <a href="">
-            <img src="./qr.jpeg" alt="">
-            <h3>Click to Scan QR</h3>
-    </a>
-<!-- >>>>>>> 49baa1b9d5a28861e0d0bde1dc8945670aad4ebe
-======= -->
-    <div class="logo">
-        <img src="./iiitdmlogo.png" alt="">
     </div>
 
-    <div class="heading">
-        <h1>InscriptGPT</h1>
-    </div>
-
-    <div class="qr">
-        <button type="button">Scan QR Code</button>
-<!-- >>>>>>> parent of cce1907 (Nav bar place changed. Logo changed) -->
-    </div>
-
-
-    <div class="queryBox">
-        <div class="returnVal">
-            <p class="answer">Ask me anything!</p>
+    <div class="main">
+        <input type="text" class="query" placeholder="Ask InscriptGPT Here">
+        <button type="submit">Ask</button>
+        <div class="answer">
+            <p>Here is your answer....</p>
         </div>
-
-        <div class="typeBox">
-            <input type="text" class="queryAsk" placeholder="Ask InscriptGPT. . .">
-            <button type="submit" class="ask">Ask</button>
-        </div>
-
-        <div class="filters">
-            <ul>
-                <li><a href="#">Medical</a></li>
-                <li><a href="#">Technology</a></li>
-                <li><a href="#">Sports</a></li>
-                <li><a href="#">Economy</a></li>
-                <li><a href="#">Society</a></li>
-                <li><a href="#">Art and Culture</a></li>
-            </ul>
-        </div>
-
     </div>
 </body>
 
 <style>
     *{
-        margin-left: 0px;
-        margin-right: 0px;
-        background-color: #ffffff;
+        margin: 0;
+        padding: 0;
     }
-
-/* <<<<<<< HEAD */
     .hidden{
         display: none;
     }
-
-    .header{
-        position: fixed;
-        left: 60px;
-    }
-    .qrcode{
-        position: relative;
-        left: 30px;
-        bottom: 25px;
-    }
-    .qr img{
-        width: 100px;
-    }
-    .qr p{
-        margin: 0;
-        text-align: center;
-        position: relative;
-        top: -3px;
-    }
-
     .overlay{
-        position: fixed;
-        inset: 0;
+        background-color: rgba(0, 0,0, 0.5);
+        backdrop-filter: blur(5px);
+        z-index: 22;
         width: 100vw;
         height: 100vh;
-        backdrop-filter: blur(5px);
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 20;
-    }
-    .qrzoom{
-        position: fixed;
-        top: 200px;
-        left: 470px;
-        z-index: 21;
-    }
-
-    .qrzoom img{
-        width: 500px;
-        margin: 0;
-        padding: 0;
-    }
-    .qrcode a{
-        text-decoration: none;
-        color: black;
     }
 
     .logo img{
-        position: absolute;
-        width: fit-content;
-/* <<<<<<< HEAD */
-        height: 80px;
-        top: 30px;
-/* ======= */
-        height: 150px;
-        width: 150px;
-/* >>>>>>> 49baa1b9d5a28861e0d0bde1dc8945670aad4ebe */
-/* ======= */
-    }
-    .heading h1{
-        font-size: 50px;
-        position: absolute;
-        /* top: px; */
-        left: 530px;
-        /* background-color: greenyellow; */
-        width: fit-content;
-        padding: 10px;
-    }
-/* <<<<<<< HEAD */
-/* <<<<<<< HEAD */
-    .heading span{
-        margin-left: 0;
-        color: #119bf1;
-    }
-/* ======= */
-
-    .qrcode{
-        position: absolute;
-        left: 1200px;
-        top: 30px;
-        /* border: 1px solid black; */
-        width: fit-content;
-    }
-
-    .qrcode img{
-        width: 120px;
-        height: 120px;
-        margin: 0;
+        margin: 30px;
         padding: 0;
-        margin-top: 5px;
-        margin-left: 5px;
-        margin-right: 5px;
+        width: 150px;
+        height: 150px;
     }
 
-    .qrcode h3{
-        position: relative;
-        left: -2px;
-        top: -13px;
-        width: fit-content;
-        margin-bottom: 0;
-        /* top: 115px; */
+    .heading{
+        position: fixed;
+        left: 590px;
+        top: 60px;
+        font-size: 22px;
     }
-
+    .heading span{
+        color: rgb(21, 145, 246);
+    }
+    
+    .qrcode{
+        position: fixed;
+        left: 1250px;
+        top: 30px;
+    }
+    .qrcode img{
+        width: 130px;
+    }
     .qrcode a{
         text-decoration: none;
-        color: black;
-        margin: 0;
+        font-size: 16px;
         padding: 0;
-/* >>>>>>> 49baa1b9d5a28861e0d0bde1dc8945670aad4ebe */
+        margin: 0;
+        color: black;
     }
-    .filters ul{
-        position: absolute;
-        top: 180px;
-        left: 210px;
-/* ======= */
-
-/* >>>>>>> parent of cce1907 (Nav bar place changed. Logo changed) */
+    .qrcode h3{
+        position: relative;
+        left: 8px;
+    }
+    .qrzoom{
+        position: fixed;
+        left: 500px;
+        z-index: 20;
+    }
+    .qrzoom img{
+        width: 450px;
     }
 
+    .filters{
+        position: fixed;
+        left: 300px;
+    }
     .filters li{
         display: inline;
-        padding-left: 40px;
+        padding: 15px;
+        margin: 20px;
+        font-size: 20px;
+        font-weight: bold;
     }
-
-    .filters li a{
+    .filters a{
         text-decoration: none;
         color: black;
-        /* border: 1px solid black; */
-        padding: 15px;
-/* <<<<<<< HEAD
-<<<<<<< HEAD */
-        font-size: 20px;
-/* ======= */
-        font-size: 22px;
-/* >>>>>>> 49baa1b9d5a28861e0d0bde1dc8945670aad4ebe */
-        font-weight: bold;
-        /* background-color: #35affb; */
-/* ======= */
-        font-size: 18px;
-        background-color: #35affb;
-/* >>>>>>> parent of cce1907 (Nav bar place changed. Logo changed) */
-        transition-duration: 0.4s;
-        border-radius: 25px;
+        transition-duration: 0.5s;
     }
-
-    .filters li a:hover{
-        /* padding: 10px; */
-/* <<<<<<< HEAD */
-        background-color:#35affb;
-/* <<<<<<< HEAD */
-        color: white;
-        /* font-weight: bolder; */
-        transition-duration: 0.4s;
+    .filters a:hover{
         border: 0.5px solid black;
-/* ======= */
-        /* font-weight: bolder; */
-        transition-duration: 0.4s;
-        /* border: 1px solid black; */
-/* >>>>>>> 49baa1b9d5a28861e0d0bde1dc8945670aad4ebe */
-        border-radius: 3px;
-/* ======= */
-        background-color:#ceecff;
-        /* font-weight: bolder; */
-        transition-duration: 0.4s;
-        border: 1px solid black;
-/* >>>>>>> parent of cce1907 (Nav bar place changed. Logo changed) */
-    }
-
-
-    .qr{
-        position: absolute;
-        top:50px;
-        left: 1150px;
-    }
-
-    .qr button{
-        padding: 20px;
-        font-size: 20px;
-        border: 3px solid black;
-        /* background-color: #35affb; */
-        transition-duration: 0.4s;
-        border-radius: 3px;
-        font-weight: bold;
-        /* box-shadow: 3px 3px 3px gray; */
-    }
-
-    .qr button:hover{
-        transition-duration: 0.4s;
-        background-color: #35affb;
-        /* font-size: 25px; */
-        font-weight: bolder;
-    }
-
-    .queryBox{
-        position: absolute;
-        left: 180px;
-        width: 1000px;
-        top: 200px;
-        margin-bottom: 20px;
-    }
-
-    .queryBox .returnVal{
-        position: relative;
-        padding: 20px;
-        border: 1px solid rgb(0, 0, 0);
-        box-shadow: 2px 2px 2px gray;
-        background-color: #ceecff;
-        font-size: 25px;
-    }
-
-    .queryBox .returnVal p{
-        background-color: #ceecff;
-    }
-
-    .queryBox .typeBox input{
-        border: 1px solid black;
-/* <<<<<<< HEAD */
-        width: 873px;
-/* ======= */
-        width: 820px;
-/* >>>>>>> parent of cce1907 (Nav bar place changed. Logo changed) */
-        position: relative;
-        right: 10px;
         padding: 10px;
-        font-size: 20px;
+        transition-duration: 0.3s;
         box-shadow: 2px 2px 2px gray;
-        background-color: #ceecff;
-        color: black;
-    }
-
-    .queryBox .typeBox{
-        padding-top: 30px;
-    }
-
-    .queryBox .typeBox button{
-        position: relative;
-        right: 10px;
-        padding: 10px;
-        margin: 0;
-        width: 100px;
-        /* margin-left: 2px; */
-        font-size: 18px;
-        width: 110px;
-        margin-left: 2px;
-        font-size: 20px;
-        transition-duration: 0.4s;
-        box-shadow: 2px 2px 2px gray;
+        background-color: rgb(21, 145, 246);
+        color: white;
         border-radius: 2px;
+    }
+
+    .main{
+        position: absolute;
+        top: 280px;
+        left: 210px;
+        width: 980px;
+        margin: 0;
+    }
+    .main input{
+        width: 840px;
+        padding: 14px;
+        margin: 0;
+        font-size: 17px;
+        background-color: rgba(21, 145, 246, 0.3);
+    }
+    .main button{
+        width: 104px;
+        margin: 0;
+        background-color: rgba(21, 145, 246, 0.3);
         font-weight: bold;
-        background-color: #ceecff;
+        padding: 14px;
+        font-size: 17px;
     }
-
-    .queryBox .typeBox button:hover{
-        transition-duration: 0.4s;
-        background-color:#35affb;
-        font-weight: bolder;
+    .main .answer{
+        border: 1px solid black;
+        margin-top: 15px;
+        padding: 14px;
+        background-color: rgba(21, 145, 246, 0.3)
     }
-
+    .main .answer p{
+        font-size: 17px;
+    }
 </style>
 
 <script>
-
-    function checkQuery(query){
-        const words = query.split(" ");
-        let retval = "Hi";
-        let krishnadeva = 'Krishnadevaraya (17 January 1471 — 17 October 1529) was an emperor of the Vijayanagara Empire reigning from 1509 to 1529. He was the third monarch of the Tuluva dynasty, and is considered to be one of the greatest rulers in Indian history.[6] He ruled the largest empire in India after the fall of the Islamic Delhi Sultanate.[7] Presiding over the empire at its zenith, he is regarded as an icon by many Indians. Krishnadevaraya earned the titles Andhra Bhoja (lit. "Bhoja of Andhra"), Karnatakaratna Simhasanadeeshwara (lit. "Lord of the Jewelled Throne of Karnataka"), Yavana Rajya Pratistapanacharya (lit. "Establishment of the King to Bahmani Throne"), Kannada Rajya Rama Ramana (lit. "Lord of the Kannada Empire), Gaubrahmana Pratipalaka (lit. "Protector of Brahmins and Cows") and Mooru Rayara Ganda (lit. "Lord of Three Kings"). He became the dominant ruler of the peninsula by defeating the sultans of Bijapur, Golconda, the Bahmani Sultanate and the Gajapatis of Odisha, and was one of the most powerful Hindu rulers in India.[1]';
-
-        let ashoka = "Ashoka (/əˈʃoʊkə/, IAST: Aśoka; also Asoka; c. 304 – 232 BCE), popularly known as Ashoka the Great, was the third Mauryan Emperor of Magadha in the Indian subcontinent during c. 268 to 232 BCE. His empire covered a large part of the Indian subcontinent, stretching from present-day Afghanistan in the west to present-day Bangladesh in the east, with its capital at Pataliputra. A patron of Buddhism, he is credited with playing an important role in the spread of Buddhism across ancient Asia. Ashoka's edicts state that during his eighth regnal year (c. 260 BCE), he conquered Kalinga after a brutal war. Ashoka subsequently devoted himself to the propagation of  or righteous conduct, the major theme of the edicts. Ashoka's edicts suggest that a few years after the Kalinga War, he was gradually drawn towards Buddhism. Buddhist and other legends from across the subcontinent and beyond credit Ashoka with establishing a large number of stupas, patronising the Third Buddhist council, supporting Buddhist missionaries, making generous donations to the sangha, and possibly even persecuting non-Buddhists";
-
-        let rajaraja = "Rajaraja I (Middle Tamil: Rājarāja Cōḻaṉ; Classical Sanskrit: Rājarāja Ćōl̥a; 947 CE – 1014 CE),[1][2] often described as Rajaraja the Great, was an Indian Chola emperor who reigned from 985 CE to 1014 CE. An iconic figure and often regarded as the 'King of Kings', he was the most powerful emperor in India during his reign and is remembered for reinstating the Chola influence and ensuring its supremacy across the Indian Ocean.[3][4] The southern part of India was united for the very first time in the Indian history under his rule.His extensive empire included vast regions of the Pandya country, the Chera country and northern Sri Lanka. He also acquired Lakshadweep and Thiladhunmadulu atoll, and part of the northern-most islands of the Maldives in the Indian Ocean. Campaigns against the Western Gangas and the Western Chalukyas extended the Chola authority as far as the Tungabhadra River. On the eastern coast, he battled with the Telugu Chola king Jata Choda Bhima for the possession of Vengi.[5][6][7][8]";
-
-        let cambodia_embassy = "The Karandai Copper-plate Inscription of Rajendra I, dated 1020 AD (eight regnal year of Rajendra Cōl̥a) records this embassy from Sūryavarman I, referring to the gift of a chariot. The inscription states that the Kamboja King Sūryavarman I presented him his war chariot ‘for the protection of his own royalty i.e, ātma-lakśmī'.\nSource: K.G. Krishnan, Karandai Tamil Sangam Plates of Rajendrachola I, (Memoirs of Archaeological Survey of India, No. 79, New Delhi, 1984.ka-mbo-ja-ra-jo- ripu-ra-ja-se-na-=jaitre-n. a ye-n =a-jayad=a-have-shu tam pra-hin. o-t pra-rtthita-mitra-bha-vo- yasmai ratham ratshitum=a-tma-lakshmi-m.Translation: The Ka-mbo-ja king, aspiring for his (Rajendra’s) friendship and in order to save his own fortunes sent him a triumphant chariot, with which he had conquered the armies of the enemy kings in the battles.";
-
-        console.log(cambodia_embassy);
-        
-        for(let i=0; i<words.length; i++){
-
-            if(words[i] == "srinidhi" || words[i] == "Srinidhi"){
-                retval = "She is ill today. It is advised to rest.";
-                break;
-            }
-
-            else if(words[i] == "samarth" || words[i] == "Samarth"){
-                retval = "Samarth was busy building me.";
-                break;
-            }
-            
-            else if(words[i] == "rohini" || words[i] == "Rohini"){
-                retval = "Rohini ma'am is present here";
-                break;
-            }
-
-            else if(words[i] == "ashoka" || words[i] == "Ashoka"){
-                retval = ashoka;
-                break;
-            }
-
-            else if(words[i] == "rajaraja" || words[i] == "Rajaraja"){
-                retval = rajaraja;
-                break;
-            }
-
-            else if(words[i] == "krishnadevaraya" || words[i] == "Krishnadevaraya"){
-                retval = krishnadeva;
-                break;
-            }
-
-            else if(words[i] == "cambodia" || words[i] == "cambodian"|| words[i] == "embassy"|| words[i] == "Cambodia"|| words[i] == "Cambodian"|| words[i] == "Embassy"){
-                retval = cambodia_embassy;
-                break;
-            }
-
-            else
-                retval = "None here!";
-        }
-
-        return retval;
-    }
-
-    let queryCheck = document.querySelector('.queryAsk').value;
-
-    document.querySelector('.ask').addEventListener("click", function(){
-        let query = document.querySelector('.queryAsk').value;
-
-            if(query == "")
-                alert("Nothing was asked. Please try again!");
-            else{
-                returned = checkQuery(query);
-                document.querySelector('.answer').textContent = returned;
-            }
-    });
-
-    document.addEventListener("keydown", function(e){
-        if(e.key == 'Enter'){
-            let query = document.querySelector('.queryAsk').value;
-
-            if(query == "")
-                alert("Nothing was asked. Please try again!");
-            else{
-                returned = checkQuery(query);
-                document.querySelector('.answer').textContent = returned;
-            }
-        }
-
-        else if(e.key == '`')
-        document.querySelector('.answer').textContent = "Ask me anything!";
-    });
-
-    let qr_on = 0;
     document.querySelector('.qrcode').addEventListener('click', function(){
-        // if(document.querySelector('.qrzoom').classList.contains('hidden')){
-        //     document.querySelector('.qrzoom').classList.remove('hidden');
-        //     qr_on = 1;
-        //     document.querySelector('body').classList.add('body_blur');
-
-        // }
-
-        document.querySelector('.overlay').classList.remove('hidden');
-        document.querySelector('.qrzoom').classList.remove('hidden');
+        document.querySelector('.qrzoom').classList.add('overlay');
     });
-
-    // document.addEventListener('keydown', function(e){
-    //     if(qr_on == 1){
-    //         document.querySelector('.qrzoom').classList.add('hidden');
-    //         document.querySelector('body').classList.remove('body_blur');
-    //     }
-    // })
-    
-    document.addEventListener('keydown', function(e){
-        if(!document.querySelector('.qrzoom').classList.contains('hidden')){
-            document.querySelector('.qrzoom').classList.add('hidden');
-            document.querySelector('.overlay').classList.add('hidden');
-        }
-    });
-    
-
 </script>
 </html>
