@@ -29,6 +29,14 @@
             <p>Press "Q" to Cancel</p>
         </div>
 
+        <div class="pageinfo hidden">
+            <div class="pageinfointernal">
+                <a href="#"><img src="./logo.png" alt=""></a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam assumenda, molestiae omnis officia distinctio itaque quos eum exercitationem expedita fuga enim molestias iste veritatis earum laborum neque cupiditate magni illo? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil commodi, accusantium debitis, quibusdam maxime perferendis dicta quis, optio sunt voluptas aspernatur sapiente totam! Sapiente dolorem perspiciatis a accusamus dignissimos ad. Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quo maxime illo reiciendis id, dolores beatae error deleniti eaque voluptatum molestias accusantium minus consequuntur perspiciatis nulla aliquid repudiandae. Voluptate, dolore!</p>
+
+                <h5>Press "Q" to Cancel</h5>
+            </div>
+        </div>
     <div class="filters">
         <ul>
             <li><a href="#">Art and Culture</a></li>
@@ -73,6 +81,40 @@
     .logo img:hover{
         transform: scale(1.2);
         transition-duration: 0.3s;
+    }
+    .pageinfo{
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition-duration: 0.4s;
+        text-justify: inter-word;
+    }
+    .pageinfointernal{
+        border: 1px solid black;
+        padding: 40px;
+        box-shadow: 3px 3px 3px 3px gray;
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    .pageinfointernal h5{
+        text-align: center;
+        position: relative;
+        top: 15px;
+    }
+    .pageinfo img{
+        position: relative;
+        text-justify:inter-word;
+        width: 100px;
+        left: 290px;
+    }
+    .pageinfo p{
+        width: 700px;
+        font-size: 20px;
+        line-height: 1.6;
     }
     .heading{
         position: fixed;
@@ -252,6 +294,16 @@
         if(query == "" && e.key == 'Enter'){
             alert("Input query is empty");
         }
+
+        if(document.querySelector('.pageinfo').classList.contains('overlay') && (e.key == 'q' || e.key == 'Q')){
+            document.querySelector('.pageinfo').classList.remove('overlay');
+            document.querySelector('.pageinfo').classList.add('hidden');
+        }
+    });
+
+    document.querySelector('.logo').addEventListener('click', function(){
+        document.querySelector('.pageinfo').classList.add('overlay');
+        document.querySelector('.pageinfo').classList.remove('hidden');
     });
 </script>
 </html>
